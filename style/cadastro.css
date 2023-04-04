@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header: #16161633;
+  --branco: white;
+  --a: bisque;
+  --textosecun: #a0a0a0;
+  --botaohover: #f0f0c8;
+  --buttonantes: #3d3d3d;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-size: 62.5%;
+  color: var(--branco);
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-image: url(/img/img5.png);
+  background-position: center center;
+  background-size: cover;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 100%;
+  height: 7vh;
+  background-color: #3D3D3D;
+}
+.menu-content {
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.logo {
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+}
+.menu-content .list-itens {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.menu-content .list-itens a {
+  text-decoration: none;
+  color: hwb(60 78% 6%);
+  padding: 1.5rem;
+  transform: 2ms ease-in;
+  position: relative;
+}
+.menu-content .list-itens a:before {
+  content: ' ';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 1px;
+  background-color: rgb(240, 240, 200);
+  transition: all 0.5s ease;
+}
+.menu-content .list-itens a:hover:before {
+  width: 100%;
+}
+.menu-content .list-itens a:hover {
+  font-weight: bold;
+  color: var(--a);
+}
+
+/* rodape */
+footer {
+    background-color: #2f2e2e;
+    padding-bottom: 13px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #rodape #footerescritas {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #p1 a, #p2 a, #p3 a {
+    font-size: 16px;
+    color: var(--branco);
+  }
+  
+  
+  .product-grid {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: transparent;
+    padding: 20px;
+    width: 750px;
+  }
+  
+  .items-produtos {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .product-item .product-image img {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .product-item h3 {
+    margin: 10px 0;
+  }
+  
+  .product-item p {
+    margin-bottom: 20px;
+  }
+  
+  .product-item button {
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; /* para posicionar o tooltip */
+  }
+  
+  .product-item button:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%; /* para posicionar o tooltip abaixo do botão */
+    left: 50%; /* para posicionar o tooltip no centro do botão */
+    transform: translateX(-50%); /* para centralizar horizontalmente */
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap; /* para evitar quebrar a linha */
+  }
+  
+  .saibamais p, .produto h3 {
+    color: var(--buttonantes);
+  }
+  
+  .product-item h3, .product-item p {
+  color: var(--buttonantes)
+  }
+  
+  #menuprincipal{
+    width: 100%;
+  }
+  body{
+    background-image: url(https://www.onze.com.br/blog/wp-content/uploads/2020/06/shutterstock_749969473-1-770x478.jpg);
+}
+  
+.butun {
+    display: grid;
+    text-align: center;
+    border-bottom: #fff;
+    gap: 30px;
+    padding: 100px;
+}
+
+.butun input{
+    font-size: 15px;
+    display: grid;
+    justify-content: center;
+    border-bottom: #fff;
+    gap: 30px;
+    background: #d9d9d9;
+    border-radius: 27px;
+    display: block;
+    margin: 0% auto;
+    width: 450px;
+    padding: 15px;
+    border: none;
+}
+
+.cor{
+    color: #F0F0C8;
+    font-size: 10rem;
+}
+ 
+main {
+    min-height: calc(100vh - 282px);
+    min-height: calc(100vh - 282px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cor{
+    font-size: 60pt;
+    -webkit-text-stroke: 0.5px black;
+    padding: 20px;
+}
+
+.butun .botao{
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: var(--branco);
+    padding: 10px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+.botao{
+    text-decoration: none; /*tira a decoração do texto*/
+    color: var(--branco); /*var é pra usar a variavel*/
+}
+
+.botao:hover{ /*hover faz executar quando o mouse passar em cima*/
+    background-color: var(--botaohover);
+    color: black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.menu-mobi {
+  display: none;
+}
+
+@media (max-width: 1025px) {
+    main{
+      height: 100vh;
+    }
+  
+    body{
+      background-size: 120%;
+      background-color: var(--buttonantes);
+    }
+}
+
+@media (max-width: 1025px) {
+    main{
+      height: 75vh;
+    }
+  
+    body{
+      background-size: 120%;
+    }
+    .logo{
+        width: auto;
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 769px) {
+  main{
+    height: 65vh;
+  }
+
+  body{
+    background-size: 205%;
+  }
+
+  .header-menu{
+    display: none;
+  }
+
+  .menu-mobi{
+    display: block;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .butun{
+    padding: 0px;
+    width: auto;
+    margin-bottom: 30px;
+  }
+
+  .butun input{
+    width: 365px;
+  }
+
+  footer{
+    margin-top: auto;
+  }
+
+  #rodape #footerescritas{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cor {
+    font-size: 50pt;
+    -webkit-text-stroke: 0.5px black;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 321px) {
+  .whats img{
+    max-width: 100%;
+  }
+
+  .btns{
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 10pt;
+    letter-spacing: 0.4rem;
+  }
+
+  .butun input{
+    width: 300px;
+  }
+
+  .butun .cor{
+    font-size: 30pt;
+  }
+}

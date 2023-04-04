@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+:root {
+  --header: #16161633;
+  --branco: white;
+  --a: bisque;
+  --textosecun: #a0a0a0;
+  --botaohover: #f0f0c8;
+  --buttonantes: #3d3d3d;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-size: 62.5%;
+  color: var(--branco);
+  font-family: 'Lato', sans-serif;
+}
+body {
+  background-image: url(/img/img5.png);
+  background-position: center center;
+  background-size: cover;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 100%;
+  height: 7vh;
+  background-color: var(--header)
+}
+.menu-content {
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.logo {
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+}
+.menu-content .list-itens {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.menu-content .list-itens a {
+  text-decoration: none;
+  color: hwb(60 78% 6%);
+  padding: 1.5rem;
+  transform: 2ms ease-in;
+  position: relative;
+}
+.menu-content .list-itens a:before {
+  content: ' ';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 1px;
+  background-color: rgb(240, 240, 200);
+  transition: all 0.5s ease;
+}
+.menu-content .list-itens a:hover:before {
+  width: 100%;
+}
+.menu-content .list-itens a:hover {
+  font-weight: bold;
+  color: var(--a);
+}
+
+main {
+  height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-content {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* textos */
+.primary-text {
+  width: 60rem;
+  font-size: 5rem;
+  color: var(--a);
+  text-align: center;
+}
+.second-text {
+  margin-top: 32px;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--textosecun);
+}
+
+/* botão */
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btns button {
+  width: 25rem;
+  height: 6rem;
+  cursor: pointer;
+  border: 1px solid var(--branco);
+  color: var(--branco);
+  text-transform: uppercase;
+  background-color: transparent;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  border-radius: 20px;
+  position: relative;
+  transition: 1.5s;
+}
+.btns button:hover {
+  color: var(--botaohover);
+  border: none;
+}
+.btns button:before {
+  content: ' ';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 0;
+  height: 60px;
+  background-color: var(--buttonantes);
+  z-index: -1;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+.btns button:hover:before {
+  width: 100%;
+}
+
+/* rodape */
+footer {
+  background-color: #2f2e2e;
+  padding: 10px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#rodape #footerescritas {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#p1 a, #p2 a, #p3 a {
+  font-size: 16px;
+  color: var(--branco);
+}
+
+
+.product-grid {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: transparent;
+  padding: 20px;
+  width: 750px;
+}
+
+#items-produtos {
+  display: flex;
+  justify-content: center;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.product-item .product-image img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.product-item h3 {
+  margin: 10px 0;
+}
+
+.product-item p {
+  margin-bottom: 20px;
+}
+
+.product-item button {
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative; /* para posicionar o tooltip */
+}
+
+.product-item button:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%; /* para posicionar o tooltip abaixo do botão */
+  left: 50%; /* para posicionar o tooltip no centro do botão */
+  transform: translateX(-50%); /* para centralizar horizontalmente */
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap; /* para evitar quebrar a linha */
+}
+
+.saibamais p, .produto h3 {
+  color: var(--buttonantes);
+}
+
+.product-item h3, .product-item p {
+color: var(--buttonantes)
+}
+
+#menuprincipal{
+  width: 100%;
+}
+
+#menuprincipal #items-produtos{
+  margin: 20px;
+}
+
+#items-produtos .produto{
+  font-size: 13pt;
+}
+
+#items-produtos .saibamais{
+  font-size: 9pt;
+}
+
+#menuprincipal .primary-text{
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.menu-mobi {
+  display: none;
+}
+
+@media (max-width: 1025px) {
+  main{
+    height: 84vh;
+  }
+
+  body{
+    background-size: 120%;
+  }
+}
+
+@media (max-width: 769px) {
+  main{
+    height: 107vh;
+  }
+
+  body{
+    background-size: 160%;
+  }
+
+  .header-menu{
+    display: none;
+  }
+
+  .menu-mobi{
+    display: block;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+  }
+  #menuprincipal #items-produtos {
+    margin: 20px 0px;
+  }
+}
+
+@media (max-width: 426px) {
+  main{
+    height: 107vh;
+  }
+
+  body{
+    background-size: 300%;
+  }
+
+  .product-grid{
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+
+  #menuprincipal{
+    margin-top: 400px;
+  }
+
+  .primary-text{
+    width: 575px;
+    font-size: 25pt;
+    padding: 0px 70px;
+  }
+
+  .btns{
+    width: auto;
+    margin-left: 0;
+  }
+
+  footer{
+    margin-top: 530px;
+  }
+
+  #rodape #footerescritas{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  body {
+    background-size: 300%;
+    background-color: var(--buttonantes);
+  }
+
+  #menuprincipal .primary-text {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: auto;
+    padding: 0;
+  }
+
+  .btns button{
+    width: 15rem;
+  }
+
+  #rodape #footerescritas p3{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 321px) {
+  .whats{
+    max-width: 100%;
+  }
+
+  .btns{
+    gap: 10px;
+
+  }
+
+  .logo {
+    font-size: 10pt;
+    letter-spacing: 0.4rem;
+  }
+}
