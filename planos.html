@@ -8,9 +8,33 @@
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style/planos.css">
     <title>Planos | Academia Winx</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <menu id="menu-mobile">
+    <button class="fecha-menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <nav>
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/planos.html">Planos</a>
+        </li>
+        <li>
+          <a href="/cadastro.html">Registrar-se</a>
+        </li>
+        <li>
+          <a href="/contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </menu>
+
   <header>
     <div class="menu-content">
       <h1 class="logo">Treine com segurança</h1>
@@ -96,5 +120,19 @@
         </div>
         <p class="copy2023">© 2023 Clube das Winx</p>
       </footer>
+
+      <script>
+        $(document).ready(function(){
+    
+          $(".menu-mobi").on("click", function(){
+            $("#menu-mobile").addClass("ativo")
+          })
+    
+          $(".fecha-menu").on("click", function() {
+            $("#menu-mobile").removeClass("ativo")
+          })
+    
+        })
+      </script>
 </body>
 </html>

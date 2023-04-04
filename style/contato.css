@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all;
+  transition: all 0.5s;
 }
 
 :root {
@@ -249,6 +249,60 @@ main {
 
 .menu-mobi {
   display: none;
+  cursor: pointer;
+}
+
+.fecha-menu{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 22pt; cursor: pointer;
+}
+
+menu {
+  width: 250px;
+  background: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  z-index: 999;
+}
+
+menu.ativo {
+  right: 0;
+}
+
+menu ul {
+  list-style-type: none;
+}
+
+#menu-mobile nav a{
+  color: var(--branco);
+  font-size: 15pt;
+  padding: 15px;
+}
+
+#menu-mobile nav{
+  padding: 10px;
+  margin-top: 30px;
+}
+
+#menu-mobile nav li{
+  padding: 7px;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-top: 15px;
+}
+
+#menu-mobile {
+  background-color: var(--textosecun);
 }
 
 @media (max-width: 1025px) {
