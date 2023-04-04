@@ -250,6 +250,7 @@ main {
 .menu-mobi {
   display: none;
   cursor: pointer;
+  font-size: 17pt;
 }
 
 .fecha-menu{
@@ -259,6 +260,7 @@ main {
   border: none;
   background: none;
   font-size: 22pt; cursor: pointer;
+  color: black;
 }
 
 menu {
